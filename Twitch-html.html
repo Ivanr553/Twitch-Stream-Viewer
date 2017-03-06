@@ -1,0 +1,40 @@
+<html>
+  <body>
+    
+    <div class="sidebar">
+      <center><h1 class="sidebar-title">Twitch Sidebar<h1></center>
+      
+        <input class="add-streamer-input" id="input"></input>
+        <button class="add-streamer-button" onclick=" search()">Search</button>
+        <div id="stream-search-container">
+        </div>
+        <br>
+        <h3 class="streamer-list-title" id="streamer-list-title">Streamer List</h3>
+        <div id="sidebar-streamer-container" class="sidebar-streamer-container"></div>
+    </div>
+      
+    <image class="twitch-image" src="https://s3-us-west-2.amazonaws.com/web-design-ext-production/p/Twitch_474x356.png" onclick="twitchLink()"></image>
+    
+    <center><h1 class="main-title">Stream Connect</h1></center>
+    <br>
+    <br>
+    <div class="stream-container">
+        <div id= "stream-container-bottom" class="clear"></div>
+    </div>
+      
+  </body>
+</html>
+<script style="text/javascript.js">
+  
+function twitchLink() {  
+  window.open("https://www.twitch.tv/");
+}
+  
+  document.getElementById("input").onkeydown = (function(event) {
+  if(event.keyCode == 13 && !event.shiftKey) {
+    event.preventDefault()
+    search()
+  }
+})
+  
+</script>
